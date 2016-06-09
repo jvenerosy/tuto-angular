@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test HTML</title>
+  </head>
+  <body ng-app>
+
+    <div>
+      <input type="text" ng-model="task" />
+      {{task}}
+      <select ng-model="order">
+        <option value="username">Organiser par nom</option>
+        <option value="content">Organiser par contenu</option>
+      </select>
+    </div>
+    <div ng-init="users=[{username: 'Julien', content: 'Yo man'}, {username: 'Jon', content: 'Ouh ouh ouuuuuh'}, {username: 'Loic', content: 'Rat'}]">
+      <div ng-repeat="user in users | filter: task | orderBy: order">
+        <p>
+          <strong>{{user.username}} : </strong>
+          {{user.content}}
+        </p>
+      </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js" charset="utf-8"></script>
+  </body>
+</html>
