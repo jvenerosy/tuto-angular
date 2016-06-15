@@ -1,0 +1,20 @@
+{
+  "name": "angular",
+  "homepage": "https://github.com/jvenerosy/tuto-angular",
+  "authors": [
+    "jvenerosy <julien.venerosy@gmail.com>"
+  ],
+  "description": "Apprentissage d'Angular.js",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-select": "^0.18.0"
+  }
+}

@@ -15,3 +15,7 @@
 
   - **scope** : liaison entre le controller et la vue
   - extension Chrome Angular Batarang pour inspecter les éléments d'Angular
+
+- **Exerice 3** : Le module
+
+  - **angular.module** : sert à encapsuler notre fonction dans un module pour une meilleure lisibilité et une modularité plus pratique, permet également l'utilisation de module externe. 
