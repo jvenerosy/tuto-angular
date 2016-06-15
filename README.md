@@ -18,4 +18,12 @@
 
 - **Exerice 3** : Le module
 
-  - **angular.module** : sert à encapsuler notre fonction dans un module pour une meilleure lisibilité et une modularité plus pratique, permet également l'utilisation de module externe. 
+  - **angular.module** : sert à encapsuler notre fonction dans un module pour une meilleure lisibilité et une modularité plus pratique, permet également l'utilisation de module externe.
+  - extension Chrome Angular Batarang pour inspecter les éléments d'Angular
+
+- **Exerice 4** : Les routes
+
+  - **Routes** : Lier les différentes pages entre elles
+
+    - **when** : charger une vue en particulier au chargement d'une URL particulière
+    - **otherwise** : vue par défaut si l'url n'est pas reconnue
