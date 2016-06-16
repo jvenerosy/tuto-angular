@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test HTML</title>
+  </head>
+  <body ng-app="app">
+
+    <div ng-view></div>
+
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.6/angular-route.min.js"></script>
+    <script>
+      var app = angular.module('app', ['ngRoute']);
+
+      angular.module('app')
+
+      .config(function($routeProvider) {
+          $routeProvider
+            .when('/', {templateUrl: 'partials/home.html', controller: 'PostCtrl'})
+            .when('/comments/:id', {templateUrl: 'partials/comments.html', controller: 'CommentsCtrl'})
+            .otherwise({redirectTo: '/'});
+      })
+
+      .factory('PostFactory', function(){
+        var factory = {
+          posts : [
+            {
+              "id": 0,
+              "name": "Gracker",
+              "content": "Pariatur Lorem consequat est elit. Consectetur Lorem consequat voluptate ea ut dolore eiusmod sunt cillum. Aliquip consequat duis ipsum voluptate dolor. Dolor laboris consectetur amet proident enim consequat veniam. Ut dolore magna irure veniam esse esse ad magna aliquip ullamco voluptate consectetur esse eiusmod. Tempor ullamco anim consequat ullamco.",
+              "comments": [
+                {
+                  "username": "Freeman",
+                  "city": "Rockingham",
+                  "email": "freemanwinters@gracker.com",
+                  "content": "Deserunt et sit fugiat dolor consectetur excepteur. Laboris magna fugiat sunt excepteur cillum adipisicing fugiat commodo cillum est ad adipisicing. Culpa sunt magna fugiat dolor aute duis consectetur irure officia id est. Aliqua esse laboris ipsum esse culpa incididunt ad do dolore eu sit eu. Esse ipsum in nostrud ad velit labore labore cillum irure nisi adipisicing."
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "name": "Rameon",
+              "content": "Adipisicing sunt ad cillum sint magna eu ea adipisicing sunt elit exercitation velit. Nostrud irure excepteur exercitation ad ipsum aliquip est consectetur. Sint aliquip dolor labore laborum occaecat ex qui quis qui ad. Ea labore mollit nisi fugiat sunt amet duis dolor exercitation. Magna laboris quis aliquip id ullamco qui. Adipisicing non non occaecat labore Lorem ex.",
+              "comments": [
+                {
+                  "username": "Prince",
+                  "city": "Naomi",
+                  "email": "princewinters@rameon.com",
+                  "content": "Velit magna ea eiusmod irure. Officia mollit occaecat id labore ullamco nulla sint aliquip. Culpa dolore officia nostrud adipisicing labore incididunt deserunt aute adipisicing ut nulla sunt. Duis elit culpa eu labore minim cupidatat et. Ipsum sunt enim officia consectetur Lorem mollit mollit."
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Nikuda",
+              "content": "Incididunt voluptate officia consectetur dolore non dolore commodo dolore. Qui aliquip commodo culpa culpa nulla ad culpa deserunt tempor mollit. Eiusmod cillum esse esse et fugiat velit aliqua nostrud qui consequat dolore ipsum duis adipisicing. Id do magna sunt proident nulla amet. Ea veniam proident ea consequat adipisicing sint excepteur pariatur veniam nostrud. Commodo ut ut aliqua aliquip dolore deserunt irure amet qui esse esse.",
+              "comments": [
+                {
+                  "username": "Susanne",
+                  "city": "Grantville",
+                  "email": "susannewinters@nikuda.com",
+                  "content": "Voluptate sit dolor ipsum fugiat. Eiusmod anim laboris ea aute velit voluptate qui consectetur. Dolore culpa aute laborum labore occaecat aute et aute fugiat sunt et ipsum proident nulla. Aliquip anim proident exercitation qui. Aliqua anim officia qui laboris id culpa dolor veniam aute officia."
+                },
+                {
+                  "username": "Lynch",
+                  "city": "Blackgum",
+                  "email": "lynchwinters@nikuda.com",
+                  "content": "Sint incididunt deserunt officia sint labore aute consectetur deserunt dolore ea occaecat fugiat eiusmod. Consequat pariatur aliqua tempor laborum deserunt veniam irure cupidatat voluptate eu. Laboris sint non exercitation elit magna dolor est. Ipsum nisi mollit ullamco mollit laborum velit labore cillum qui deserunt in qui. Mollit adipisicing aliqua fugiat do non enim dolor deserunt."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "name": "Aquoavo",
+              "content": "Lorem est consequat esse minim aliquip mollit culpa eu. Commodo et ut reprehenderit cupidatat nostrud nostrud minim adipisicing in aliquip irure. Velit qui minim in ex magna tempor ullamco enim nostrud velit laborum proident occaecat. Velit proident eu deserunt officia aliqua anim tempor ut. Officia qui dolor sunt duis ullamco. Quis aliqua culpa sint ut ad dolore id adipisicing exercitation.",
+              "comments": [
+                {
+                  "username": "Gilda",
+                  "city": "Mapletown",
+                  "email": "gildawinters@aquoavo.com",
+                  "content": "Minim officia qui adipisicing eu fugiat id cupidatat aliquip commodo fugiat. Magna eiusmod Lorem minim irure culpa consequat aliqua veniam veniam. Consequat est voluptate voluptate officia officia sint qui amet non ea eiusmod dolor officia. Reprehenderit officia proident amet commodo. Qui in ea cillum pariatur aliqua amet nulla sunt pariatur."
+                },
+                {
+                  "username": "Geraldine",
+                  "city": "Gila",
+                  "email": "geraldinewinters@aquoavo.com",
+                  "content": "Sint nisi id sint enim aliqua amet ut nostrud mollit dolor. Do aliqua voluptate commodo culpa et commodo nisi commodo. Ad ipsum qui ad nulla velit. Non Lorem velit occaecat irure sint enim aliquip aliqua esse esse proident. Excepteur exercitation ea quis nostrud non eiusmod nisi nulla ullamco irure laborum anim qui."
+                },
+                {
+                  "username": "Kaitlin",
+                  "city": "Veyo",
+                  "email": "kaitlinwinters@aquoavo.com",
+                  "content": "Commodo est nisi in nostrud culpa quis incididunt aute proident. Commodo dolore ut eiusmod exercitation ipsum cupidatat. Aliquip exercitation id labore fugiat pariatur proident et consectetur exercitation id sunt. Officia do ad cillum culpa. Cupidatat consequat veniam occaecat in veniam non ut tempor."
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "name": "Satiance",
+              "content": "Adipisicing magna sit occaecat fugiat fugiat deserunt. Mollit proident consequat occaecat pariatur non et anim dolore qui officia reprehenderit nostrud. Do sint ipsum aliquip ullamco id labore aliquip ullamco. Nostrud quis ex adipisicing adipisicing. In occaecat ut eu eiusmod sunt consectetur officia. Exercitation incididunt do dolor nulla eiusmod sit sint veniam irure consectetur nulla sint.",
+              "comments": [
+                {
+                  "username": "Ware",
+                  "city": "Monument",
+                  "email": "warewinters@satiance.com",
+                  "content": "Anim veniam id esse ex adipisicing deserunt elit reprehenderit velit reprehenderit qui excepteur. Sint excepteur exercitation dolor irure nisi laborum qui non do in aliqua. Fugiat cupidatat qui aliquip ut elit incididunt incididunt ullamco culpa exercitation do eu nulla Lorem. Aliqua dolore sint irure cillum dolore ex sit nisi et ea. Nostrud Lorem laborum ex nisi."
+                }
+              ]
+            },
+            {
+              "id": 5,
+              "name": "Corporana",
+              "content": "Dolor est labore consectetur culpa officia magna ipsum laborum ut. Anim laborum occaecat sint velit elit. Velit magna et cillum ex in. Aliquip cupidatat consequat labore fugiat eiusmod duis irure Lorem tempor eu ad excepteur ut occaecat. Pariatur enim ad eiusmod deserunt cupidatat et ullamco consequat cupidatat nisi incididunt. Eiusmod velit laboris irure eiusmod ut non exercitation amet.",
+              "comments": [
+                {
+                  "username": "Terry",
+                  "city": "Wedgewood",
+                  "email": "terrywinters@corporana.com",
+                  "content": "Consectetur irure duis incididunt ea. Minim nisi quis tempor nostrud elit proident nostrud excepteur deserunt et. Deserunt reprehenderit sunt magna duis ex ad ullamco est do duis labore dolor. Adipisicing dolor dolor magna culpa eu laboris dolor et eiusmod aliqua adipisicing. Incididunt incididunt elit in ex non culpa non magna mollit."
+                }
+              ]
+            },
+            {
+              "id": 6,
+              "name": "Puria",
+              "content": "Dolore proident proident deserunt anim nisi nostrud cillum tempor. Laboris exercitation commodo ad deserunt aliqua. Ipsum cupidatat velit et anim ad dolor occaecat laboris aute nisi ex id. Deserunt elit ea cillum dolor nulla exercitation do sit esse esse irure fugiat qui ad. Voluptate consequat amet commodo labore ex mollit enim do. Amet deserunt quis velit laboris enim.",
+              "comments": [
+                {
+                  "username": "Aguirre",
+                  "city": "Shaft",
+                  "email": "aguirrewinters@puria.com",
+                  "content": "Ipsum mollit do sint officia mollit ut consequat sint. Tempor cupidatat nulla nisi minim duis officia consequat reprehenderit do Lorem pariatur. Dolor qui sunt sunt ad culpa Lorem consequat velit adipisicing sunt. Reprehenderit commodo amet aliqua proident nisi nisi occaecat mollit occaecat in. Esse minim duis irure voluptate est id tempor non esse cupidatat magna ea."
+                },
+                {
+                  "username": "Susan",
+                  "city": "Crenshaw",
+                  "email": "susanwinters@puria.com",
+                  "content": "Sunt ea occaecat nulla consectetur occaecat dolore qui. Laborum magna qui aliquip anim adipisicing deserunt eu eiusmod sunt ullamco adipisicing magna mollit. Sunt elit occaecat mollit sit magna sit ex eu. Dolor laboris ut proident ex duis ullamco. Proident enim nostrud do ad ut sunt esse nulla sint mollit ipsum."
+                }
+              ]
+            }
+          ],
+          getPosts : function(){
+            return factory.posts;
+          },
+          getPost : function(id) {
+            var post = {};
+            angular.forEach(factory.posts, function(value, key) {
+              if(value.id == id) {
+                post = value;
+              }
+            });
+            return post;
+          }
+        }
+
+        return factory;
+      })
+
+      .controller('PostCtrl', function($scope, PostFactory) {
+
+          $scope.posts = PostFactory.getPosts();
+
+      })
+
+      .controller('CommentsCtrl', function($scope, PostFactory, $routeParams) {
+
+        var post = PostFactory.getPost($routeParams.id);
+
+        $scope.title = post.name;
+        $scope.comments = post.comments;
+
+      });
+
+
+    </script>
+  </body>
+</html>

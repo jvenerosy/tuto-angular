@@ -1,0 +1,27 @@
+.ui-select-match {
+  width: 20%;
+  margin-bottom: 20px;
+}
+
+.ui-select-toggle, .ui-select-search {
+  display: block;
+  cursor: pointer;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.ui-select-search {
+  width: 20%;
+  outline: none;
+}
+
+.ui-select-choices {
+  width: 20% !important;
+  padding: 0px;
+  outline: lightgrey solid 1px;
+}
+
+.ui-select-bootstrap .ui-select-choices-row>a {
+  text-decoration: none;
+}

@@ -27,3 +27,5 @@
 
     - **when** : charger une vue en particulier au chargement d'une URL particulière
     - **otherwise** : vue par défaut si l'url n'est pas reconnue
+
+- **Exercice 5** : Les services (Model)

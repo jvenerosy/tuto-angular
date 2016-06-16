@@ -1,0 +1,11 @@
+<div>
+  <h1>{{title}}</h1>
+  <div ng-repeat="comment in comments | filter: query | orderBy: order">
+    <p>
+      <strong>{{comment.username}} : </strong>
+      {{comment.content}}
+    </p>
+  </div>
+</div>
+
+<a href="#/">Retour</a>
