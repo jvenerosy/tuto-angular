@@ -1,0 +1,19 @@
+<h3 ng-show="loading">Chargement...</h3>
+<div ng-hide="loading">
+  <a href="#/">Retour</a>
+  <h1>{{title}}</h1>
+  <div ng-repeat="comment in comments | filter: query | orderBy: order">
+    <p>
+      <strong>{{comment.username}} : </strong>
+      {{comment.content}}
+    </p>
+  </div>
+
+  <form ng-submit="addComment()">
+    <input type="text" placeholder="Nom d'utilisateur" ng-model="newComment.username">
+    <input type="text" placeholder="Ville" ng-model="newComment.city">
+    <input type="email" placeholder="Email" ng-model="newComment.email">
+    <textarea name="comments" placeholder="Commentaire" ng-model="newComment.content"></textarea>
+    <input type="submit" value="Envoyer">
+  </form>
+</div>
